@@ -76,7 +76,7 @@ html, body{
 }
 .headerindex{
     font-family: 'AnyConv.com__Roboto-BlackItalic.woff2', sans-serif;
-    font-weight: 400;
+    font-weight: 400;    
 }
 .header {
     position: relative;
@@ -112,43 +112,92 @@ html, body{
 .second-menu li a{
     padding-left: 0;
 }
+.headerindex ul li a{
+    transition: .5s;
+}
+.header-list .homeworksmenu a{
+    padding-left: 0;
+
+}
+.headerindex ul li a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #a5a0a0;
+    z-index: -1;
+    transform: scale(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+.headerindex ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.headerindex ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: #a5a0a0;
+    z-index: -1;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+.headerindex ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+.homeworksmenu a{
+    padding: auto;
+    padding-left: 0;
+}
 .blocks li{
     padding-left: 25px;
 }
 .header-list li:hover .second-menu{
-    display: block;
+    /*display: block;*/
+    top: 100%;
 }
 .blocks{
     position: relative;
 }
 .second-menu li:hover .last-menu{
-    display: block;
+    /*display: block;*/
     width: 100%;
+    right: 100%;
 }
 
 .last-menu{
     position: absolute;
-    right: 100%;
+    right: -1000%;
     top: 0;
-    display: none;
+    /*display: none;*/
     font-family: 'AnyConv.com__Righteous-Regular.woff2', sans-serif;
     font-weight: 400;
+    transition: right 2s cubic-bezier(.11,.88,.9,.25);
 }
 
 
 .second-menu{
     position: absolute;
     left: 0;
-    top: 100%;
-    display: none;
+    top: -1000%;
+    /*display: none;*/
     font-family: 'AnyConv.com__Roboto-Medium.woff2', sans-serif;
     font-weight: 500;
+    transition: all 2s cubic-bezier(.92,1.79,.88,.77);
 }
 
 .second-menu li{
     background: #949191;
 }
-
 
 .hidden{
     width: 0;
@@ -179,13 +228,16 @@ html, body{
     width: 100px;
     height: 100px;
 }
-.logo svg:hover{
+/*.logo svg:hover{
     fill: aqua;
 }
+*/
 .logo{
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 /*float*/
 
@@ -485,4 +537,12 @@ body{
 .sitenav-list li:last-child a{
     border-bottom: 0;
     margin: 0;
+}
+.logo a{
+    transition: all 1s ease;
+}
+.logo a:hover{
+   fill: blue;
+   stroke:chartreuse;
+
 }
