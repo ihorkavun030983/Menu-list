@@ -72,6 +72,7 @@ html, body{
 
 .body{
     background: none;
+    overflow: hidden auto;
     
 }
 .headerindex{
@@ -170,18 +171,28 @@ html, body{
 }
 .second-menu li:hover .last-menu{
     /*display: block;*/
-    width: 100%;
+
+
+
+
+
+
+
+
+
+
     right: 100%;
 }
 
 .last-menu{
+    width: 100%;
     position: absolute;
     right: -1000%;
     top: 0;
     /*display: none;*/
     font-family: 'AnyConv.com__Righteous-Regular.woff2', sans-serif;
     font-weight: 400;
-    transition: right 2s cubic-bezier(.11,.88,.9,.25);
+    transition: right .3s cubic-bezier(.11,.88,.9,.25);
 }
 
 
@@ -192,7 +203,7 @@ html, body{
     /*display: none;*/
     font-family: 'AnyConv.com__Roboto-Medium.woff2', sans-serif;
     font-weight: 500;
-    transition: all 2s cubic-bezier(.92,1.79,.88,.77);
+    transition: all .3s cubic-bezier(.92,1.79,.88,.77);
 }
 
 .second-menu li{
@@ -236,7 +247,6 @@ html, body{
     display: flex;
     justify-content: space-evenly;
 }
-
 
 
 /*float*/
@@ -500,8 +510,8 @@ body{
 .navigation{
     width: 300px;
     position: relative;
-
 }
+
 .sitenav{
     width: 300px;
     position: fixed;
@@ -544,5 +554,71 @@ body{
 .logo a:hover{
    fill: blue;
    stroke:chartreuse;
+}
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    padding-left: 60px;
+    transition: padding 1s linear;
+}
 
+.left-list:hover + .wrapper{
+    padding-left: 300px;
+}
+
+.left-list{
+    width: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:#5e5c5c;
+    overflow: hidden;
+    transition: all 1s linear;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+.left-list:hover {
+    transition: all 1s;
+    width: 300px;
+}
+
+.left-list li{
+    font-size: 24px;
+    padding: 20px;
+    
+}
+
+.left-list li:hover{
+    background: rgb(102, 104, 101);
+    width: 350px;
+}
+.left-list > ul{
+    margin-top: 85px;
+}
+.left-list li a{
+    text-decoration: none;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    line-height: 10px;
+}
+
+.left-list svg{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    transform: rotate(45deg);
+}
+
+span {
+    overflow: hidden;
+    border: 3px solid #ffff;
+    transform: rotate(-45deg);
+}
+
+.left-list svg:hover{
+    transform: scale(1.5) rotate(45deg);
 }
