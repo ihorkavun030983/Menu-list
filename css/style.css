@@ -572,30 +572,26 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
+    bottom: 0;
     background:#5e5c5c;
     overflow: hidden;
     transition: all 1s linear;
     box-shadow: 10px 0 20px rgba(0,0,0,0.4);
     z-index: 1000;
+    padding-top: 85px;
 }
 .left-list:hover {
     transition: all 1s;
     width: 300px;
 }
 
-.left-list li{
-    font-size: 24px;
-    padding: 20px;
+.left-list li a:hover{
+    background: rgb(102, 104, 101);
     
 }
-
-.left-list li:hover{
-    background: rgb(102, 104, 101);
-    width: 350px;
-}
 .left-list > ul{
-    margin-top: 85px;
+    
+    font-size: 24px;
 }
 .left-list li a{
     text-decoration: none;
@@ -604,6 +600,7 @@ body{
     align-items: center;
     gap: 30px;
     line-height: 10px;
+    padding: 20px;
 }
 
 .left-list svg{
@@ -611,14 +608,16 @@ body{
     height: 40px;
     padding: 5px;
     transform: rotate(45deg);
+    transition: all .5s;
 }
 
 span {
-    overflow: hidden;
     border: 3px solid #ffff;
     transform: rotate(-45deg);
+    flex: 0 0 auto;
+    overflow: hidden;
 }
 
-.left-list svg:hover{
+.left-list li a svg:hover{
     transform: scale(1.5) rotate(45deg);
 }
