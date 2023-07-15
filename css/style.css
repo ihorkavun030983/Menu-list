@@ -621,3 +621,119 @@ span {
 .left-list li a svg:hover{
     transform: scale(1.5) rotate(45deg);
 }
+
+
+.setting{
+    width: 200px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+    border-radius: 10px 0 0 10px;
+    background: rgb(176, 177, 175);
+    z-index: 1;
+    transition: all .5s linear;
+    text-align: center;
+}
+
+.setting:hover{
+    transform: translate(0%, -50%);
+}
+.gear {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 10px 0 0 10px;
+    background: rgb(176, 177, 175);
+    padding: 5px;
+    line-height: 10px;
+}
+ .gear svg{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.gear svg{
+    animation: my-gear 1s linear infinite;
+}
+
+@keyframes my-gear {
+100%{
+    transform: rotate(360deg);
+}  
+}
+
+.gear svg:hover{
+    animation: none;
+}
+
+.setting ul{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    
+}
+.setting .gear li{
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 5px 0;
+    font-size: 20px;
+    
+    
+}
+
+.setting li button {
+    margin: 5px;
+    padding: 4px 0;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 15px;
+    
+} 
+ 
+.blue{
+    background: blue;
+}
+
+.blue:hover{
+    animation: pulse-blue 1s linear infinite;
+}
+@keyframes pulse-blue {
+    0%{
+        background: blue;
+    }
+    50%{
+        background: rgb(109, 152, 245);
+    }
+    100%{
+        background: rgb(3, 182, 167);
+    }
+}
+
+.red{
+    background: red;
+}
+.red:hover{
+    animation: pulsing 2s linear infinite;
+}
+
+@keyframes pulsing {
+    0% {
+      background: #ffff;
+    }
+    50% {
+        background: #d3cece;
+    }
+    100% {
+        background: #4b4848;
+    }
+  }
+.orange{
+    background: orange;
+}
+.yellow{
+    background: yellow;
+}
