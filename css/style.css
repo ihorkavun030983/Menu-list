@@ -622,7 +622,6 @@ span {
     transform: scale(1.5) rotate(45deg);
 }
 
-
 .setting{
     width: 200px;
     position: fixed;
@@ -634,6 +633,9 @@ span {
     z-index: 1;
     transition: all .5s linear;
     text-align: center;
+}
+.setting:hover svg{
+    animation-play-state: paused;
 }
 
 .setting:hover{
@@ -648,11 +650,11 @@ span {
     background: rgb(176, 177, 175);
     padding: 5px;
     line-height: 10px;
+    cursor: pointer;
 }
  .gear svg{
     width: 50px;
     height: 50px;
-    cursor: pointer;
 }
 
 .gear svg{
@@ -665,23 +667,16 @@ span {
 }  
 }
 
-.gear svg:hover{
-    animation: none;
-}
-
 .setting ul{
     display: flex;
     flex-flow: column;
     gap: 10px;
-    
+    padding: 10px;
 }
 .setting .gear li{
     color: #111;
-    text-decoration: none;
-    text-transform: uppercase;
     margin: 5px 0;
     font-size: 20px;
-    
     
 }
 
@@ -691,7 +686,6 @@ span {
     cursor: pointer;
     width: 150px;
     border-radius: 15px;
-    
 } 
  
 .blue{
@@ -733,7 +727,35 @@ span {
   }
 .orange{
     background: orange;
+    animation: orangebutton 1s linear infinite;
 }
+@keyframes orangebutton {
+    0% {
+      background: orange;
+    }
+    50% {
+        background: #d3e206;
+    }
+    100% {
+        background: #5cd40c;
+    }
+  }
+
 .yellow{
     background: yellow;
 }
+.yellow:hover{
+    animation: yellowbutton 1s linear infinite;
+}
+@keyframes yellowbutton {
+    
+    50% {
+        rotate: 50deg;
+    }
+    75%{
+        rotate: 100deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+  }
